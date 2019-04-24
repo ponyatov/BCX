@@ -45,7 +45,7 @@
 /** @} */
 
                                 /** @brief память ВМ (изолированная) */
-extern CELL M[Msz];
+extern uint8_t M[Msz];
                                 /** @brief указатель инструкций */
 extern UCELL Ip;
                                 /** @brief указатель компиляции/выделения памяти */

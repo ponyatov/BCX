@@ -10,7 +10,7 @@ bcx$(EXE): $(VMC) $(VMH)
 	$(CC) $(CFLAGS) -o $@ $(VMC)
 
 %.bc: compiler$(EXE) %.4th
-	$(CURDIR)/$^ && od -x $@
+	$(CURDIR)/$^ && hexdump -C $@
 
 BCC = $(VMC) compiler.cpp parser.cpp lexer.cpp
 BCH = $(CMH) compiler.hpp parser.hpp
