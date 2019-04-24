@@ -22,10 +22,10 @@ extern std::map<std::string,CELL> label;
 extern std::map<std::string,std::vector<CELL>> forward;
 
 					/// определить метку
-extern void Ldefine(char name[]);
+extern void Ldefine(std::string name);
 
                                         /// сохранить байткод @ref M\[0..@ref Cp\]
-extern void save(char *filename);
+extern void save(std::string filename);
 
 /** @defgroup lexyacc lex/yacc interface 
  * @{ */

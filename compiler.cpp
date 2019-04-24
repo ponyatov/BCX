@@ -11,8 +11,8 @@ int main(int argc, char* argv[]) {
 	return yyparse();
 }
 
-void save(char *filename) {
-	FILE *bc = fopen(filename,"wb");
+void save(std::string filename) {
+	FILE *bc = fopen(filename.c_str(),"wb");
 	fwrite(M,1,Cp,bc);
 	fclose(bc);
 }
@@ -20,9 +20,9 @@ void save(char *filename) {
 std::map<std::string,CELL> label;
 std::map<std::string,std::vector<CELL>> forward;
 
-void Ldefine(char name[]) {
-	label[std::string(name)] = Cp;							// register new label
-	printf("%.4X:\t%s\n",Cp,name);		// dump symbol table
+void Ldefine(std::string name) {
+	label[name] = Cp;							// register new label
+	printf("%.4X:\t%s\n",Cp,name.c_str());		// dump symbol table
 	for (auto i=label.begin(),e=label.end();i!=e;i++) {
 		std::cout << "<"<< i->first << ">\n";
 	}

@@ -14,10 +14,10 @@ bye					{ yylval.op = op_BYE; return CMD0; }
 \.end				{ return pEND; }
 
 \.save				{ return pSAVE; }
-[a-zA-Z0-9_]+\.bc	{ yylval.s = yytext; return FILENAME; }
+[a-zA-Z0-9_]+\.bc	{ yylval.s = new std::string(yytext); return FILENAME; }
 
 \:					{ return COLON; }
-[a-zA-Z0-9_]+		{ yylval.s = yytext; return SYMBOL; }
+[a-zA-Z0-9_]+		{ yylval.s = new std::string(yytext); return SYMBOL; }
 
 [ \t\r\n]+			{}						// drop spaces
 .					{ yyerror("lexer");	}	// undetected char

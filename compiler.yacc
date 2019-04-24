@@ -2,7 +2,7 @@
 #include "compiler.hpp"
 %}
 
-%defines %union { uint8_t op; char *s; }
+%defines %union { uint8_t op; std::string *s; }
 
 %token pEND pVM pSAVE
 %token <s>  FILENAME
@@ -14,8 +14,8 @@
 REPL :
 REPL : REPL pVM				{ BCX(); }
 REPL : REPL pEND			{ DUMP(); BYE(); }
-REPL : REPL pSAVE FILENAME	{ save($3); BYE(); }
+REPL : REPL pSAVE FILENAME	{ save(*$3); BYE(); }
 REPL : REPL CMD0			{ M[Cp++] = $2; }
-REPL : REPL SYMBOL COLON	{ Ldefine($2); }
+REPL : REPL SYMBOL COLON	{ Ldefine(*$2); }
 
 
