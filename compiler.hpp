@@ -2,27 +2,51 @@
 #define _H_COMPILER
 
 #include "bcx.h"
+#include <assert.h>
 
 #include <iostream>
-#include <cassert>
 
+#include <map>
+#include <vector>
+
+/**
+ * @defgroup excompiler compiler
+ * @brief внешний компилятор байткода
+ * @ingroup bcx
+ * @{
+ * */
+
+                                        /// @brief таблица существующих меток
+extern std::map<std::string,CELL> label;
+                                        /// таблица адресов -- сыылок вперед
+extern std::map<std::string,std::vector<CELL>> forward;
+
+					/// определить метку
+extern void Ldefine(char name[]);
+
+                                        /// сохранить байткод @ref M\[0..@ref Cp\]
 extern void save(char *filename);
 
-/** @name lex/yacc interface */
+/** @defgroup lexyacc lex/yacc interface 
+ * @{ */
 
-										/// fetch next token from lexer
+					/// олучить следущий токен от лексера
 extern int yylex();
-										/// current line in source file
+					/// текущий номер строки в файле исходного кода
 extern int yylineno;
-										/// last matched string in lexer
+					/// последняя найденна лексером строка
 extern char *yytext;
-										/// lexr input file handler
+					/// текущий входной файл лексера
 extern FILE *yyin;
-										/// run parser
+					/// запуск парсера синтаксиса
 extern int yyparse();
-										/// error callback
+					/// callback синтаксической ошибки
 extern void yyerror(std::string msg);
 #include "parser.hpp"
+
+/// @}
+
+/// @}
 
 #endif // _H_COMPILER
 

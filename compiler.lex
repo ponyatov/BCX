@@ -16,6 +16,9 @@ bye					{ yylval.op = op_BYE; return CMD0; }
 \.save				{ return pSAVE; }
 [a-zA-Z0-9_]+\.bc	{ yylval.s = yytext; return FILENAME; }
 
+\:					{ return COLON; }
+[a-zA-Z0-9_]+		{ yylval.s = yytext; return SYMBOL; }
+
 [ \t\r\n]+			{}						// drop spaces
 .					{ yyerror("lexer");	}	// undetected char
 

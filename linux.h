@@ -6,7 +6,8 @@
 #ifndef _H_LINUX
 #define _H_LINUX
 
-#include <stdlib.h>
+#include "bcx.h"
+#include <assert.h>
 
 /**
  * @defgroup bcxlinux linux

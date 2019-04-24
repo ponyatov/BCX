@@ -6,6 +6,8 @@ VMH = bcx.h $(OS).h
 
 CC = gcc
 
+CFLAGS += -I.
+
 bcx$(EXE): $(VMC) $(VMH)
 	$(CC) $(CFLAGS) -o $@ $(VMC)
 
@@ -15,7 +17,7 @@ bcx$(EXE): $(VMC) $(VMH)
 BCC = $(VMC) compiler.cpp parser.cpp lexer.cpp
 BCH = $(CMH) compiler.hpp parser.hpp
 
-CXXFLAGS += -DBCXCOMPILER
+CXXFLAGS += -I. -DBCXCOMPILER
 
 compiler$(EXE): $(BCC) $(BCH)
 	$(CXX) $(CXXFLAGS) -o $@ $(BCC)

@@ -48,6 +48,8 @@
 extern uint8_t M[Msz];
                                 /** @brief указатель инструкций */
 extern UCELL Ip;
+								/** @bried current opcode */
+extern uint8_t op;
                                 /** @brief указатель компил€ции/выделени€ пам€ти */
 extern UCELL Cp;
                                 /** @brief стек возвратов */
@@ -88,6 +90,8 @@ extern void BCX(void);
  * */
                             /// `DUMP ( addr size -- )` дамп пам€ти
 extern void DUMP(void);
+							/// `NOP ( -- )` do nothing
+extern void NOP(void);
                             /// `BYE ( retcode -- )` завершение работы
 extern void BYE(void);
 
