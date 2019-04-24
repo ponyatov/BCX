@@ -1196,7 +1196,7 @@ yyreduce:
     {
         case 3:
 #line 12 "compiler.yacc" /* yacc.c:1646  */
-    { VM(); }
+    { bcx(); }
 #line 1201 "parser.cpp" /* yacc.c:1646  */
     break;
 
