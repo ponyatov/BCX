@@ -1,0 +1,5 @@
+<map id="команды" name="команды">
+<area shape="rect" id="node3" href="$group__bcxcflow.html" title="управление\l потоком выполнения" alt="" coords="180,5,333,48"/>
+<area shape="rect" id="node4" href="$group__debug.html" title="отладка" alt="" coords="237,72,276,99"/>
+<area shape="rect" id="node2" href="$group__bcxvm.html" title="виртуальная машина " alt="" coords="5,43,45,69"/>
+</map>

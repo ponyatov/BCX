@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bcx: bcx:FORTH</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bcx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">bcx:FORTH </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>интерпретатор байткода для встраиваемых систем</p>
+<ul>
+<li><code>bcx</code> &ndash; защищенная среда выполнения пользовательских команд и расширений,<ul>
+<li>предназначена для встраивания в прошивки микроконтроллеров низшего сегмента с объемом ОЗУ от 2 Кб.</li>
+</ul>
+</li>
+<li>Для предоставления пользователю устройств на микроконтроллерах полноценной командной оболочки была выбрана технология интерпретации байткода и язык Форт.</li>
+</ul>
+<h2>байткод</h2>
+<p>Байткод &ndash; платформенно-независимое представление программ, для выполнения которых требуется программный интерпретатор байткода. Интерпретатор <code>bcx</code> реализует виртуальную стековую машину, в которой каждая команда ВМ представлена в виде</p><ul>
+<li>один байт &ndash; опкод команды</li>
+<li>16-битное слово &ndash; необязательный параметр команды</li>
+</ul>
+<p>Архитектура виртуальной машины соотсветствует языку программирования Форт.</p>
+<p>В комплекте <code>bcx</code> поставляется:</p><ul>
+<li>переносимый код интеретатора байткода /ANSI C/</li>
+<li>кросс-компилятор байткода /С++/flex/bison/</li>
+<li>референсная реализация встраиваемой командной оболочки /Forth/Ragel/</li>
+<li>TODO: интерактивный симулятор-отладчик</li>
+</ul>
+<h3>Достоинства применения байткода</h3>
+<ul>
+<li>система и структура команд стековой ВМ дает<ul>
+<li>очень компактный интерпретируемый код</li>
+<li>небольшие расходы памяти для работы программ</li>
+</ul>
+</li>
+<li>простой интерпретатор легко переносить и адаптировать, добавляя команды специфичные для конкретного устройства и среды выполнения</li>
+<li>адресное пространство виртуальной машины <code>bcx</code> изолировано от адресов микроконтроллера, что дает повышенную стабильность:<ul>
+<li>пользовательский код имеет ограниченный доступ к аппаратуре (только через команды ввода/вывода, обслуживаемые интерпретатором байткода)</li>
+<li>ошибки в байт-программах не приводят к сбоям работы основной прошивки написанной на Си</li>
+<li>удаленная загрузка программ не приводит к порче прошивки (приложения IoT)</li>
+</ul>
+</li>
+<li>программная интерпретация позволяет реализовывать любые фишки виртуализированной платформы: многозадачность, защита памяти, событийная асинхронная архитуктура, кластеринг и распределенные вычисления,..</li>
+</ul>
+<h3>Недостатки</h3>
+<ul>
+<li>потеря скорости и ресурсов на интерпретации<ul>
+<li>некритично, так как байткод предполагается для реализации командного интерфейса, и некритичных мелких пользовательских расширений</li>
+<li>узкие места всегда можно перенести в основную прошивку, написан на Си, и определив дополнительные пользовательские команды виртуальной машины</li>
+</ul>
+</li>
+<li>изолированное адресное пространство ВМ<ul>
+<li>требует использования специальных команд абсолютного доступа к памяти платформы</li>
+<li>это самый неудачный вариант: прямой доступ разрушает защиту основной прошивки от сбоев, используйте специализированные команды на Си, контролирующие правильность параметров</li>
+</ul>
+</li>
+<li>использование птичьего языка программирования<ul>
+<li>реализация компилятора Си для стековой машины &ndash; задача нетривиальная, последние 20 лет все усилия тратились на разработку методов оптимизации для RISC, компилятор возможен но байткод будет лапшеобразным</li>
+</ul>
+</li>
+</ul>
+<h2>интерактивный симулятор-отладчик</h2>
+<p>Переносимый интерпретатор может быть собран для любого типа компьютера, имеющего станандартный компилятор Си, в том числе и для desktop-систем Windows/Linux/MacOS/... При некотором желании можно его портировать для запуска программ на мобильных устройствах Android/iOS, написав интерпретатор байткода на Java и добавив дополнительные команды для GUI, сети, libSDL, и т.д. Web/JavaScript &ndash; аналогично, с запуском байткода в браузере пользователя, или на устройстве в комплекте со всраиваемым веб-сервером (написанным на Форте 8-)</p>
+<p>TODO: для отладки программ написать интерактивный симулятор-отладчик с GUI, или реализовать поддержку <code>gdb</code></p>
+<h2>язык Форт (нестандартный)</h2>
+<ul>
+<li><a href="https://github.com/ponyatov/bcx/releases/download/240419/sf.pdf">Начальный курс программирования на языке Форт</a> Лео Броуди М.: "Финансы и статистика" 1990</li>
+<li><a href="https://github.com/ponyatov/bcx/releases/download/240419/baranov.pdf">Язык Форт и его реализации</a> Баранов, Ноздрунов Ленинград: "Машиностроение" 1988</li>
+</ul>
+<h2>обеспечение совместимости с другими командными протоколами</h2>
+<p>Если устройство должно обеспечивать работу команд других протоколов, передаваемых по тому же коммуникационному каналу (MODBUS RTU,..)</p><ul>
+<li>для выделения команд на Форте следует использовать символ <code>$</code> передаваемый первым символом команды</li>
+<li>для обеспечения работы в полудуплексе переключение Rx/Tx выполняется перед обработкой команды</li>
+</ul>
+<h2>система команд <code>bcx</code></h2>
+<table class="doxtable">
+<tr>
+<th></th><th>мнемоника </th><th>опкод </th><th>параметр </th><th>стек </th><th></th></tr>
+<tr>
+<td><a class="el" href="group__bcxcflow.html#gabe8cfc9442ee22b03cbd910fe8d57b7f">op_NOP</a> </td><td>nop </td><td>0x00 </td><td></td><td>( &ndash; ) </td><td>нет операции </td></tr>
+<tr>
+<td><a class="el" href="group__bcxcflow.html#ga8b19f732fa785774c8c7d3e7beda0284">op_BYE</a> </td><td>bye </td><td>0xFF </td><td></td><td>( retcode &ndash; ) </td><td>останов программы </td></tr>
+<tr>
+<td><a class="el" href="group__bcxcflow.html#ga11f6dba9f3fb5162929fd2b561701c82">op_JMP</a> </td><td>jmp </td><td>0x01 </td><td>addr </td><td>( &ndash; ) </td><td>безусловный переход </td></tr>
+<tr>
+<td><a class="el" href="group__bcxcflow.html#ga545414e056fc73471e92b113d321e493">op_qJMP</a> </td><td>qjmp </td><td>0x02 </td><td>addr </td><td>( false &ndash; ) </td><td>условный переход по false </td></tr>
+<tr>
+<td><a class="el" href="group__bcxcflow.html#ga06aa6c14a3518a8642be9d457257a031">op_CALL</a> </td><td>call </td><td>0x03 </td><td>addr </td><td>(R: &ndash; addr ) </td><td>вложенный вызов </td></tr>
+<tr>
+<td><a class="el" href="group__bcxcflow.html#gaf58828713825755b6d8b71b384a23166">op_RET</a> </td><td>ret </td><td>0x04 </td><td></td><td>(R: addr &ndash; ) </td><td>возврат </td></tr>
+<tr>
+<td><a class="el" href="group__bcxcflow.html#gac17b56b3f16e386162ca89b361d18b14">op_LIT</a> </td><td>lit </td><td>0x05 </td><td>int </td><td>( &ndash; int ) </td><td>числовой литерал (поместить константу в стек) </td></tr>
+</table>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bcx: Файл bcx.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bcx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл bcx.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>bcx:FORTH</code>  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для bcx.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="bcx_8h__incl.png" border="0" usemap="#bcx_8h" alt=""/></div>
+<map name="bcx_8h" id="bcx_8h">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="bcx_8h__dep__incl.png" border="0" usemap="#bcx_8hdep" alt=""/></div>
+<map name="bcx_8hdep" id="bcx_8hdep">
+<area shape="rect" id="node2" href="compiler_8hpp_source.html" title="compiler.hpp" alt="" coords="5,80,101,107"/>
+<area shape="rect" id="node3" href="linux_8h.html" title="Linux. " alt="" coords="126,80,186,107"/>
+</map>
+</div>
+</div>
+<p><a href="bcx_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:gaec93e83855ac17c3c25c55c37ca186dd"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#gaec93e83855ac17c3c25c55c37ca186dd">BYTE</a>&#160;&#160;&#160;uint8_t</td></tr>
+<tr class="memdesc:gaec93e83855ac17c3c25c55c37ca186dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">байт <br /></td></tr>
+<tr class="separator:gaec93e83855ac17c3c25c55c37ca186dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b4d4a1fcf419d5a3820c5b4b027ee8b"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#ga8b4d4a1fcf419d5a3820c5b4b027ee8b">CELL</a>&#160;&#160;&#160;int16_t</td></tr>
+<tr class="memdesc:ga8b4d4a1fcf419d5a3820c5b4b027ee8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">слово памяти ВМ <br /></td></tr>
+<tr class="separator:ga8b4d4a1fcf419d5a3820c5b4b027ee8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02fc9424dbf19f2808ba360f205bd459"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#ga02fc9424dbf19f2808ba360f205bd459">UCELL</a>&#160;&#160;&#160;uint16_t</td></tr>
+<tr class="memdesc:ga02fc9424dbf19f2808ba360f205bd459"><td class="mdescLeft">&#160;</td><td class="mdescRight">беззнаковый <a class="el" href="group__bcxvm.html#ga8b4d4a1fcf419d5a3820c5b4b027ee8b">CELL</a>. <br /></td></tr>
+<tr class="separator:ga02fc9424dbf19f2808ba360f205bd459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1cec3581ecbca2736ce7b2b63fac893"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#gae1cec3581ecbca2736ce7b2b63fac893">CELLsz</a>&#160;&#160;&#160;(sizeof(<a class="el" href="group__bcxvm.html#ga8b4d4a1fcf419d5a3820c5b4b027ee8b">CELL</a>))</td></tr>
+<tr class="memdesc:gae1cec3581ecbca2736ce7b2b63fac893"><td class="mdescLeft">&#160;</td><td class="mdescRight">размер <a class="el" href="group__bcxvm.html#ga8b4d4a1fcf419d5a3820c5b4b027ee8b">CELL</a> в байтах <br /></td></tr>
+<tr class="separator:gae1cec3581ecbca2736ce7b2b63fac893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad197097190188a1227ecf9ae73cc79fb"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxconfig.html#gad197097190188a1227ecf9ae73cc79fb">Msz</a>&#160;&#160;&#160;0x1000</td></tr>
+<tr class="memdesc:gad197097190188a1227ecf9ae73cc79fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">размер памяти ВМ в байтах <br /></td></tr>
+<tr class="separator:gad197097190188a1227ecf9ae73cc79fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad490b09d64ce578835754c6c46b4ef89"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxconfig.html#gad490b09d64ce578835754c6c46b4ef89">Rsz</a>&#160;&#160;&#160;0x100</td></tr>
+<tr class="memdesc:gad490b09d64ce578835754c6c46b4ef89"><td class="mdescLeft">&#160;</td><td class="mdescRight">размер стека возвратов <br /></td></tr>
+<tr class="separator:gad490b09d64ce578835754c6c46b4ef89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40a11b332fa610c83d8bffba4c1ac708"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxconfig.html#ga40a11b332fa610c83d8bffba4c1ac708">Dsz</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="memdesc:ga40a11b332fa610c83d8bffba4c1ac708"><td class="mdescLeft">&#160;</td><td class="mdescRight">размер стека данных <br /></td></tr>
+<tr class="separator:ga40a11b332fa610c83d8bffba4c1ac708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe8cfc9442ee22b03cbd910fe8d57b7f"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#gabe8cfc9442ee22b03cbd910fe8d57b7f">op_NOP</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="memdesc:gabe8cfc9442ee22b03cbd910fe8d57b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>NOP ( -- )</code> пустая команда <br /></td></tr>
+<tr class="separator:gabe8cfc9442ee22b03cbd910fe8d57b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b19f732fa785774c8c7d3e7beda0284"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#ga8b19f732fa785774c8c7d3e7beda0284">op_BYE</a>&#160;&#160;&#160;0xFF</td></tr>
+<tr class="memdesc:ga8b19f732fa785774c8c7d3e7beda0284"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>BYE ( retcode -- )</code> завершение работы <br /></td></tr>
+<tr class="separator:ga8b19f732fa785774c8c7d3e7beda0284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11f6dba9f3fb5162929fd2b561701c82"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#ga11f6dba9f3fb5162929fd2b561701c82">op_JMP</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:ga11f6dba9f3fb5162929fd2b561701c82"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>JMP ( -- )</code> безусловный переход <br /></td></tr>
+<tr class="separator:ga11f6dba9f3fb5162929fd2b561701c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga545414e056fc73471e92b113d321e493"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#ga545414e056fc73471e92b113d321e493">op_qJMP</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="memdesc:ga545414e056fc73471e92b113d321e493"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>?JMP ( false -- )</code> условный переход по false <br /></td></tr>
+<tr class="separator:ga545414e056fc73471e92b113d321e493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06aa6c14a3518a8642be9d457257a031"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#ga06aa6c14a3518a8642be9d457257a031">op_CALL</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="memdesc:ga06aa6c14a3518a8642be9d457257a031"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>CALL (R: -- addr )</code> вложенный вызов <br /></td></tr>
+<tr class="separator:ga06aa6c14a3518a8642be9d457257a031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf58828713825755b6d8b71b384a23166"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#gaf58828713825755b6d8b71b384a23166">op_RET</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="memdesc:gaf58828713825755b6d8b71b384a23166"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>RET (R: addr -- )</code> возврат <br /></td></tr>
+<tr class="separator:gaf58828713825755b6d8b71b384a23166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac17b56b3f16e386162ca89b361d18b14"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#gac17b56b3f16e386162ca89b361d18b14">op_LIT</a>&#160;&#160;&#160;0x05</td></tr>
+<tr class="memdesc:gac17b56b3f16e386162ca89b361d18b14"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LIT ( -- int )</code> числовой литерал (поместить константу в стек) <br /></td></tr>
+<tr class="separator:gac17b56b3f16e386162ca89b361d18b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga84179e16d442c3c8970e1ac1736283cf"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#ga8b4d4a1fcf419d5a3820c5b4b027ee8b">CELL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#ga84179e16d442c3c8970e1ac1736283cf">POP</a> (void)</td></tr>
+<tr class="memdesc:ga84179e16d442c3c8970e1ac1736283cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">снять вершину стека <br /></td></tr>
+<tr class="separator:ga84179e16d442c3c8970e1ac1736283cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a9ae707ae45c5c09b04c7148968732f"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#ga8b4d4a1fcf419d5a3820c5b4b027ee8b">CELL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#ga7a9ae707ae45c5c09b04c7148968732f">TOP</a> (void)</td></tr>
+<tr class="memdesc:ga7a9ae707ae45c5c09b04c7148968732f"><td class="mdescLeft">&#160;</td><td class="mdescRight">получить вершину стека <br /></td></tr>
+<tr class="separator:ga7a9ae707ae45c5c09b04c7148968732f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf98c23c15bb831565f7ed2130f11f027"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#gaf98c23c15bb831565f7ed2130f11f027">BCX</a> (void)</td></tr>
+<tr class="memdesc:gaf98c23c15bb831565f7ed2130f11f027"><td class="mdescLeft">&#160;</td><td class="mdescRight">интерпретатор байткода <br /></td></tr>
+<tr class="separator:gaf98c23c15bb831565f7ed2130f11f027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d9f3446653e398af0583979cee23c70"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>NOP</b> (void)</td></tr>
+<tr class="separator:ga9d9f3446653e398af0583979cee23c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e9d7bd118297b9ec7cbbe003d3a7f80"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>BYE</b> (void)</td></tr>
+<tr class="separator:ga7e9d7bd118297b9ec7cbbe003d3a7f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga833477f5c3bc4f230b83e481c58a0684"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>JMP</b> (void)</td></tr>
+<tr class="separator:ga833477f5c3bc4f230b83e481c58a0684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cc2613d807e7e42a861cb4430113f57"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>qJMP</b> (void)</td></tr>
+<tr class="separator:ga1cc2613d807e7e42a861cb4430113f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d6192ebc013c963903c8b6cd4f838a6"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CALL</b> (void)</td></tr>
+<tr class="separator:ga8d6192ebc013c963903c8b6cd4f838a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b09d861a2be6db2007fc1a2dd939070"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RET</b> (void)</td></tr>
+<tr class="separator:ga5b09d861a2be6db2007fc1a2dd939070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga902920a11b6afff26f1b2db5a9ea9865"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LIT</b> (void)</td></tr>
+<tr class="separator:ga902920a11b6afff26f1b2db5a9ea9865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1b08ad693e4a9383e53d2658ab41c8d"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__debug.html#gaf1b08ad693e4a9383e53d2658ab41c8d">DUMP</a> (void)</td></tr>
+<tr class="memdesc:gaf1b08ad693e4a9383e53d2658ab41c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>DUMP ( addr size -- )</code> дамп памяти <br /></td></tr>
+<tr class="separator:gaf1b08ad693e4a9383e53d2658ab41c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7d3b4ecbaa848212e0454860b3d886b"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>store</b> (<a class="el" href="group__bcxvm.html#ga02fc9424dbf19f2808ba360f205bd459">UCELL</a> addr, <a class="el" href="group__bcxvm.html#ga8b4d4a1fcf419d5a3820c5b4b027ee8b">CELL</a> cell)</td></tr>
+<tr class="separator:gab7d3b4ecbaa848212e0454860b3d886b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga406950451f88b8b8b62511599f90354a"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Bcompile</b> (uint8_t)</td></tr>
+<tr class="separator:ga406950451f88b8b8b62511599f90354a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00f68654d8f28eb44e24b39ff54ff320"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>compile</b> (<a class="el" href="group__bcxvm.html#ga8b4d4a1fcf419d5a3820c5b4b027ee8b">CELL</a> cell)</td></tr>
+<tr class="separator:ga00f68654d8f28eb44e24b39ff54ff320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ga914f01f44380c9cedf01116e3e07b902"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#gaec93e83855ac17c3c25c55c37ca186dd">BYTE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#ga914f01f44380c9cedf01116e3e07b902">M</a> [<a class="el" href="group__bcxconfig.html#gad197097190188a1227ecf9ae73cc79fb">Msz</a>]</td></tr>
+<tr class="memdesc:ga914f01f44380c9cedf01116e3e07b902"><td class="mdescLeft">&#160;</td><td class="mdescRight">память ВМ (изолированная) <br /></td></tr>
+<tr class="separator:ga914f01f44380c9cedf01116e3e07b902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf842d65fac49472b0b14a940fef65ccd"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#ga02fc9424dbf19f2808ba360f205bd459">UCELL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#gaf842d65fac49472b0b14a940fef65ccd">Ip</a></td></tr>
+<tr class="memdesc:gaf842d65fac49472b0b14a940fef65ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">указатель инструкций <br /></td></tr>
+<tr class="separator:gaf842d65fac49472b0b14a940fef65ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe2d113422ed8608d140e8f370f35fb8"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#gaec93e83855ac17c3c25c55c37ca186dd">BYTE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#gafe2d113422ed8608d140e8f370f35fb8">op</a></td></tr>
+<tr class="memdesc:gafe2d113422ed8608d140e8f370f35fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">опкод текущей команды <br /></td></tr>
+<tr class="separator:gafe2d113422ed8608d140e8f370f35fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29f342948bef69aa87c8ef13d13f17ee"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#ga02fc9424dbf19f2808ba360f205bd459">UCELL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#ga29f342948bef69aa87c8ef13d13f17ee">Cp</a></td></tr>
+<tr class="memdesc:ga29f342948bef69aa87c8ef13d13f17ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">указатель компиляции/выделения памяти <br /></td></tr>
+<tr class="separator:ga29f342948bef69aa87c8ef13d13f17ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29c47a2bb62a10c222a742ae3b725823"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#ga02fc9424dbf19f2808ba360f205bd459">UCELL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#ga29c47a2bb62a10c222a742ae3b725823">R</a> [<a class="el" href="group__bcxconfig.html#gad490b09d64ce578835754c6c46b4ef89">Rsz</a>]</td></tr>
+<tr class="memdesc:ga29c47a2bb62a10c222a742ae3b725823"><td class="mdescLeft">&#160;</td><td class="mdescRight">стек возвратов <br /></td></tr>
+<tr class="separator:ga29c47a2bb62a10c222a742ae3b725823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac97ca3fb5c15bb0fd697c7af1cfb8f6f"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#gaec93e83855ac17c3c25c55c37ca186dd">BYTE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#gac97ca3fb5c15bb0fd697c7af1cfb8f6f">Rp</a></td></tr>
+<tr class="memdesc:gac97ca3fb5c15bb0fd697c7af1cfb8f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">вершина стека возвратов <br /></td></tr>
+<tr class="separator:gac97ca3fb5c15bb0fd697c7af1cfb8f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec9c1b7e0eddc1500d8b5f3eeaeff4c8"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#ga8b4d4a1fcf419d5a3820c5b4b027ee8b">CELL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#gaec9c1b7e0eddc1500d8b5f3eeaeff4c8">D</a> [<a class="el" href="group__bcxconfig.html#ga40a11b332fa610c83d8bffba4c1ac708">Dsz</a>]</td></tr>
+<tr class="memdesc:gaec9c1b7e0eddc1500d8b5f3eeaeff4c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">стек данных <br /></td></tr>
+<tr class="separator:gaec9c1b7e0eddc1500d8b5f3eeaeff4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1e2c5acc32432d0eb4f91da10dd176f"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__bcxvm.html#gaec93e83855ac17c3c25c55c37ca186dd">BYTE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxvm.html#gae1e2c5acc32432d0eb4f91da10dd176f">Dp</a></td></tr>
+<tr class="memdesc:gae1e2c5acc32432d0eb4f91da10dd176f"><td class="mdescLeft">&#160;</td><td class="mdescRight">вершина стека данных <br /></td></tr>
+<tr class="separator:gae1e2c5acc32432d0eb4f91da10dd176f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><code>bcx:FORTH</code> </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

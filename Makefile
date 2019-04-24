@@ -28,3 +28,6 @@ parser.cpp: compiler.yacc
 lexer.cpp: compiler.lex
 	flex -o $@ $<
 
+doxy:
+	rm -rf docs ; doxygen doxy.gen 1>/dev/null
+

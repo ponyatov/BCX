@@ -1,0 +1,5 @@
+<map id="vm" name="vm">
+<area shape="rect" id="node1" href="$group__bcxconfig.html" title="конфигурация" alt="" coords="235,5,273,32"/>
+<area shape="rect" id="node2" href="$group__bcxcmd.html" title="команды" alt="" coords="235,56,273,83"/>
+<area shape="rect" id="node3" href="$group__bcx.html" title="интерпретатор байткода для встраиваемых систем bcx:FORTH. " alt="" coords="5,31,99,57"/>
+</map>
