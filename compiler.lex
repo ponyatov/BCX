@@ -10,8 +10,11 @@
 nop					{ yylval.op = op_NOP; return CMD0; }
 bye					{ yylval.op = op_BYE; return CMD0; }
 
-.vm					{ return pVM; }
-.end				{ return pEND; }
+\.vm				{ return pVM; }
+\.end				{ return pEND; }
+
+\.save				{ return pSAVE; }
+[a-zA-Z0-9_]+\.bc	{ yylval.s = yytext; return FILENAME; }
 
 [ \t\r\n]+			{}						// drop spaces
 .					{ yyerror("lexer");	}	// undetected char

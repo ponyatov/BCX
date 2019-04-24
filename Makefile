@@ -1,5 +1,5 @@
 FORTH.log: bcx$(EXE) FORTH.bc
-	./$^
+	$(CURDIR)/$^
 
 VMC = bcx.c $(OS).c
 VMH = bcx.h $(OS).h
@@ -10,7 +10,7 @@ bcx$(EXE): $(VMC) $(VMH)
 	$(CC) $(CFLAGS) -o $@ $(VMC)
 
 %.bc: compiler$(EXE) %.4th
-	./$^ && od -x $@
+	$(CURDIR)/$^ && od -x $@
 
 BCC = $(VMC) compiler.cpp parser.cpp lexer.cpp
 BCH = $(CMH) compiler.hpp parser.hpp

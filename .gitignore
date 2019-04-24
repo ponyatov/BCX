@@ -7,5 +7,10 @@ wiki/
 *.exe
 *.o
 
+lexer.?pp
+parser.?pp
+
 bcx
 compiler
+*.bc
+

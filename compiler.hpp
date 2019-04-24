@@ -4,6 +4,9 @@
 #include "bcx.h"
 
 #include <iostream>
+#include <cassert>
+
+extern void save(char *filename);
 
 /** @name lex/yacc interface */
 
@@ -13,6 +16,8 @@ extern int yylex();
 extern int yylineno;
 										/// last matched string in lexer
 extern char *yytext;
+										/// lexr input file handler
+extern FILE *yyin;
 										/// run parser
 extern int yyparse();
 										/// error callback
