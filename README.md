@@ -5,9 +5,9 @@ Scripting and command line engine for tiny embedded systems (microcontrollers an
 
 (c) Dmitry Ponyatov <<dponyatov@gmail.com>> CC BY
 
-     github: https://github.com/ponyatov/bcx
+github: https://github.com/ponyatov/bcx
 
 manual (ru): http://http://ponyatov.github.io/bcx
 
-  wiki (en): https://github.com/ponyatov/bcx/wiki
+wiki (en): https://github.com/ponyatov/bcx/wiki
 

@@ -5,7 +5,7 @@ UCELL Cp=0;
 UCELL R[Rsz]; uint8_t Rp=0;
  CELL D[Dsz]; uint8_t Dp=0;
 
-void bcx(void) {
+void BCX(void) {
 }
 
 extern CELL POP(void) { return D[Dp--]; }

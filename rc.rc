@@ -1,2 +1,2 @@
 #!/bin/sh
-gvim -p FORTH.log FORTH.src compiler.lex compiler.yacc compiler.hpp compiler.cpp bcx.c bcx.h linux.c linux.h Makefile
+gvim -p FORTH.log FORTH.4th compiler.lex compiler.yacc compiler.hpp compiler.cpp bcx.c bcx.h linux.c linux.h Makefile

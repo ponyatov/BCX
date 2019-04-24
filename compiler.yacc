@@ -9,7 +9,7 @@
 
 %%
 REPL :
-REPL : REPL pVM		{ bcx(); }
+REPL : REPL pVM		{ BCX(); }
 REPL : REPL pEND	{ DUMP(); BYE(); }
 REPL : REPL CMD0	{ M[Cp++] = $2; }
 

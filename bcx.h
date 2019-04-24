@@ -66,7 +66,7 @@ extern CELL POP(void);
 extern CELL TOP(void);
 
 							/** @brief интерпретатор байткода */
-extern void bcx(void);
+extern void BCX(void);
 
 /** @} */
 

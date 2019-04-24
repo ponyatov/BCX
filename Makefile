@@ -10,12 +10,15 @@ bcx$(EXE): $(VMC) $(VMH)
 	$(CC) $(CFLAGS) -o $@ $(VMC)
 
 %.bc: compiler$(EXE) %.4th
-	./$^
+	./$^ && od -x $@
 
 BCC = $(VMC) compiler.cpp parser.cpp lexer.cpp
 BCH = $(CMH) compiler.hpp parser.hpp
+
+CXXFLAGS += -DBCXCOMPILER
+
 compiler$(EXE): $(BCC) $(BCH)
-	$(CXX) -o $@ $(BCC)
+	$(CXX) $(CXXFLAGS) -o $@ $(BCC)
 
 parser.cpp: compiler.yacc
 	bison -o $@ $<
