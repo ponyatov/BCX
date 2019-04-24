@@ -1,6 +1,11 @@
 #ifndef _H_COMPILER
 #define _H_COMPILER
 
+/**
+ * @file
+ * @brief внешний компилятор байткода (C++/flex/bison)
+ */
+
 #include "bcx.h"
 #include <assert.h>
 

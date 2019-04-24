@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief Windows
+ * @brief Windows-специфичный код
  * */
 
 #ifndef _H_WIN32

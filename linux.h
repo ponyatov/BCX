@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief Linux
+ * @brief Linux-специфичный код
  * */
 
 #ifndef _H_LINUX
