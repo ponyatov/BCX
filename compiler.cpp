@@ -27,7 +27,7 @@ void Ldefine(std::string *name) {
 	if ( fw != forward.end() ) {
 		for (auto it = fw->second.begin(); it != fw->second.end(); it++ )
 			store(*it,Cp);
-		forward.erase(fw);						// remove from table after patching
+		forward.erase(fw);			// удалить пропатченную метку
 	}
 }
 

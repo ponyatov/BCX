@@ -92,7 +92,7 @@ TODO: для отладки программ написать интерактивный симулятор-отладчик с GUI,
 | @ref op_NOP | nop | 0x00 | | ( -- ) | нет операции |
 | @ref op_BYE | bye | 0xFF | | ( retcode -- ) | останов программы |
 | @ref op_JMP | jmp | 0x01 | addr | ( -- ) | безусловный переход |
-| @ref op_qJMP | qjmp | 0x02 | addr | ( false -- ) | словный переход по false |
+| @ref op_qJMP | qjmp | 0x02 | addr | ( false -- ) | условный переход по false |
 | @ref op_CALL | call | 0x03 | addr | (R: -- addr ) | вложенный вызов |
 | @ref op_RET | ret | 0x04 | | (R: addr -- ) | возврат |
 | @ref op_LIT | lit | 0x05 | int | ( -- int ) | числовой литерал (поместить константу в стек) |

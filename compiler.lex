@@ -22,8 +22,8 @@ lit					{ yylval.op = op_LIT;  return CMD1; }
 \.save				{ return pSAVE; }
 [a-zA-Z0-9_]+\.bc	{ yylval.s = new std::string(yytext); return FILENAME; }
 
-0x[0-9a-fA-F]+		{ yylval.n = strtol(yytext,NULL,0x10); return NUMBER; }
-0b[01]+				{ yylval.n = strtol(yytext,NULL,0x02); return NUMBER; }
+0x[0-9a-fA-F]+		{ yylval.n = strtol(&yytext[2],NULL,0x10); return NUMBER; }
+0b[01]+				{ yylval.n = strtol(&yytext[2],NULL,0x02); return NUMBER; }
 
 \:					{ return COLON; }
 [a-zA-Z0-9_]+		{ yylval.s = new std::string(yytext); return SYMBOL; }

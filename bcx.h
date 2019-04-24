@@ -76,34 +76,33 @@ extern void BCX(void);
  * @{ */
 
 /**
- * @defgroup bcxop таблица опкодов
- * @{ */
-
-			    /** @brief `NOP ( -- )` пустая команда */
-                            /** @brief `BYE ( retcode -- )` завершение работы */
-#define op_JMP  0x01
-#define op_qJMP 0x02
-#define op_CALL 0x03
-#define op_RET  0x04
-#define op_LIT  0x05
-
-/** @} bcxop */
-
-/**
  * @defgroup bcxcflow управление потоком выполнения
  * @{ */
 
-			    /** @brief @ref NOP `( -- )` пустая команда */
+			    /** @brief `NOP ( -- )` пустая команда */
 #define op_NOP  0x00
 extern void NOP(void);
-                            /** @brief @ref BYE `( retcode -- )` завершение работы */
+
+                            /** @brief `BYE ( retcode -- )` завершение работы */
 #define op_BYE  0xFF
 extern void BYE(void);
 
+                            /** @brief `JMP ( -- )` безусловный переход */
+#define op_JMP  0x01
 extern void JMP(void);
+
+                            /** @brief `?JMP ( false -- )` условный переход по false */
+#define op_qJMP 0x02
 extern void qJMP(void);
+                            /** @brief `CALL (R: -- addr )` вложенный вызов */
+#define op_CALL 0x03
 extern void CALL(void);
+                            /** @brief `RET (R: addr -- )` возврат */
+#define op_RET  0x04
 extern void RET(void);
+                            /** @brief `LIT ( -- int )` числовой литерал (поместить константу в стек) */
+#define op_LIT  0x05
+extern void LIT(void);
 
 /** @} bcxcflow */
 
