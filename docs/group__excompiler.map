@@ -1,4 +1,0 @@
-<map id="compiler" name="compiler">
-<area shape="rect" id="node1" href="$group__bcx.html" title="интерпретатор байткода для встраиваемых систем bcx:FORTH. " alt="" coords="5,5,99,32"/>
-<area shape="rect" id="node3" href="$group__lexyacc.html" title="lex/yacc interface" alt="" coords="265,5,391,32"/>
-</map>
