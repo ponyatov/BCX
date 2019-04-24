@@ -1,7 +1,7 @@
 #include "bcx.h"
 
 /* для IAR используйте утилиту bc2c и задайте define в настройках проекта */
-#ifndef BCXIAR
+#ifndef BCX2C
 BYTE M[Msz]; UCELL Cp =0;
 #endif
 

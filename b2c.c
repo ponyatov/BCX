@@ -13,7 +13,7 @@ int main(int argc, char*argv[]) {
 
 	Cp = fread(M,1,Msz,in); assert(Cp);
 
-	fprintf(out,"#include \"bcx.h\"\r\n\r\n#ifdef BCXIAR\r\n\r\n");
+	fprintf(out,"#include \"bcx.h\"\r\n\r\n#ifdef BCX2C\r\n\r\n");
 	fprintf(out,"BYTE M[Msz]={");
 
 	for (UCELL addr = 0; addr < Cp; addr++) {
