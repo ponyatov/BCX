@@ -7,7 +7,7 @@ Scripting and command line engine for tiny embedded systems (microcontrollers an
 
 github: https://github.com/ponyatov/bcx
 
-manual (ru): http://http://ponyatov.github.io/bcx
+manual (ru): http://ponyatov.github.io/bcx
 
 wiki (en): https://github.com/ponyatov/bcx/wiki
 
