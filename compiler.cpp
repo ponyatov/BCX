@@ -17,20 +17,42 @@ void save(std::string filename) {
 	fclose(bc);
 }
 
-std::map<std::string,CELL> label;
-std::map<std::string,std::vector<CELL>> forward;
+std::map<std::string,UCELL> label;
+std::map<std::string,std::vector<UCELL>> forward;
 
-void Ldefine(std::string name) {
-	label[name] = Cp;							// register new label
-	printf("%.4X:\t%s\n",Cp,name.c_str());		// dump symbol table
-	for (auto i=label.begin(),e=label.end();i!=e;i++) {
-		std::cout << "<"<< i->first << ">\n";
+void Ldefine(std::string *name) {
+	label[*name] = Cp;                              // зарегестрировать новую метку
+	printf("%.4X:\t%s\n",Cp,name->c_str());		// вывести метку: <addr>: <label>
+	auto fw = forward.find(*name);			// разрешить ссылки вперед
+	if ( fw != forward.end() ) {
+		for (auto it = fw->second.begin(); it != fw->second.end(); it++ )
+			store(*it,Cp);
+		forward.erase(fw);						// remove from table after patching
 	}
-//	auto fw = forward.find(*name);				// resolve forward references
-//	if ( fw != forward.end() )
-//		for (auto it = fw->second.begin(); it != fw->second.end(); it++ )
-//			store(*it,Cp);
 }
+
+void Lcompile(std::string *name) {
+	if (label.find(*name) != label.end()) {		// если метка известна
+		compile(label[*name]);			// скомпилировать ее
+	} else {
+
+	if (forward.find(*name) == forward.end())	// если еще нет в forward[]
+		forward[*name] = std::vector<UCELL>();	// создать пустой список адресов
+	forward[*name].push_back(Cp);			// зарегестрировать текущий Cp
+	compile(-1);					// скомпилировать фиктивный адрес
+
+	}
+}
+
+void Lunresolved(void) {
+	for (auto fw = forward.begin(); fw != forward.end(); fw++) {
+		std::cerr << "\nUnresolved symbols: ";
+		std::cerr << fw->first << "\t";
+		std::cerr << "\n\n"; 
+		abort();
+	}
+}
+
 
 #endif // BCXCOMPILER
 

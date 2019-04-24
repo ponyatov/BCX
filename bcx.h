@@ -18,16 +18,17 @@
 #include <stdio.h>
 
 /**
- * @defgroup bmxvm vm
+ * @defgroup bcxvm vm
  * @brief виртуальная машина
  * @{
 */
-
-                                                        /** @brief слово памяти ВМ */
+                                /** @brief байт */
+#define  BYTE   uint8_t
+                                /** @brief слово памяти ВМ */
 #define  CELL   int16_t
-                                                        /** @brief беззнаковый CELl */
+                                /** @brief беззнаковый @ref CELL */
 #define UCELL  uint16_t
-                                                        /** @rief размер @ref CELL в байтах */
+                                /** @brief размер @ref CELL в байтах */
 #define CELLsz (sizeof(CELL))
 
 /** 
@@ -35,32 +36,32 @@
  * @{
  * */
 
-                                                        /** @brief размер памяти ВМ в байтах */
+                                /** @brief размер памяти ВМ в байтах */
 #define Msz 0x1000
-                                                        /** @brief размер стека возвратов */
+                                /** @brief размер стека возвратов */
 #define Rsz 0x100
-                                                        /** @brief размер стека данных */
+                                /** @brief размер стека данных */
 #define Dsz 0x10
 
 /** @} */
 
                                 /** @brief память ВМ (изолированная) */
-extern uint8_t M[Msz];
+extern BYTE M[Msz];
                                 /** @brief указатель инструкций */
 extern UCELL Ip;
-								/** @bried current opcode */
-extern uint8_t op;
+			        /** @brief опкод текущей команды */
+extern BYTE op;
                                 /** @brief указатель компиляции/выделения памяти */
 extern UCELL Cp;
                                 /** @brief стек возвратов */
 extern UCELL R[Rsz];
                                 /** @brief вершина стека возвратов */
-extern uint8_t Rp;
+extern BYTE Rp;
 
                                 /** @brief стек данных */
 extern CELL D[Dsz];
                                 /** @brief вершина стека данных */
-extern uint8_t Dp;
+extern BYTE Dp;
 
                                 /** @brief снять вершину стека */
 extern CELL POP(void);
@@ -70,32 +71,56 @@ extern CELL TOP(void);
 							/** @brief интерпретатор байткода */
 extern void BCX(void);
 
-/** @} */
+/** 
+ * @defgroup bcxcmd команды
+ * @{ */
 
-							/** @name опкоды */
+/**
+ * @defgroup bcxop таблица опкодов
+ * @{ */
 
-							/** @brief `NOP ( -- )` пустая команда */
-#define op_NOP  0x00
-#define op_BYE  0xFF
+			    /** @brief `NOP ( -- )` пустая команда */
+                            /** @brief `BYE ( retcode -- )` завершение работы */
 #define op_JMP  0x01
 #define op_qJMP 0x02
 #define op_CALL 0x03
 #define op_RET  0x04
 #define op_LIT  0x05
 
+/** @} bcxop */
+
 /**
- * @defgroup debug debug
- * @brief отладка
- * @{
- * */
-                            /// `DUMP ( addr size -- )` дамп памяти
-extern void DUMP(void);
-							/// `NOP ( -- )` do nothing
+ * @defgroup bcxcflow управление потоком выполнения
+ * @{ */
+
+			    /** @brief @ref NOP `( -- )` пустая команда */
+#define op_NOP  0x00
 extern void NOP(void);
-                            /// `BYE ( retcode -- )` завершение работы
+                            /** @brief @ref BYE `( retcode -- )` завершение работы */
+#define op_BYE  0xFF
 extern void BYE(void);
 
-// @}
+extern void JMP(void);
+extern void qJMP(void);
+extern void CALL(void);
+extern void RET(void);
+
+/** @} bcxcflow */
+
+/**
+ * @defgroup debug отладка
+ * @{
+ * */
+                            /// @brief `DUMP ( addr size -- )` дамп памяти
+extern void DUMP(void);
+
+/** @} debug */
+
+/// @} bcxcmd
+
+extern void store(UCELL addr, CELL cell);
+extern void Bcompile(uint8_t);
+extern void compile(CELL cell);
 
 // @}
 

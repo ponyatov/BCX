@@ -16,13 +16,18 @@
  * @{
  * */
 
-                                        /// @brief таблица существующих меток
-extern std::map<std::string,CELL> label;
-                                        /// таблица адресов -- сыылок вперед
-extern std::map<std::string,std::vector<CELL>> forward;
+/// @brief таблица существующих меток (имя метки: адрес)
+extern std::map<std::string,UCELL> label;
+/// @brief таблица ссылок вперед (имя метки: список адресов параметров команд `jmp`/`call`)
+/// @details при каждом определении новой метки в Ldefine()
+extern std::map<std::string,std::vector<UCELL>> forward;
 
-					/// определить метку
-extern void Ldefine(std::string name);
+					/// определить метку с текущим @ref Cp
+extern void Ldefine(std::string *name);
+                                        /// скомпилировать метку по имени
+extern void Lcompile(std::string *name);
+										/// dump unresolved and abort
+extern void Lunresolved(void);
 
                                         /// сохранить байткод @ref M\[0..@ref Cp\]
 extern void save(std::string filename);
