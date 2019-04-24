@@ -15,3 +15,7 @@ compiler
 *.bc
 
 docs/
+
+bc2c
+FORTH.c
+

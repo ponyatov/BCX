@@ -1,3 +1,11 @@
+default: FORTH.c
+
+FORTH.c: bc2c$(EXE) FORTH.bc
+	$(CURDIR)/$^ $@
+
+bc2c$(EXE): bc2c.c bcx.c
+	$(CC) -o $@ $^
+
 FORTH.log: bcx$(EXE) FORTH.bc
 	$(CURDIR)/$^
 

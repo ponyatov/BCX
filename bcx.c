@@ -1,7 +1,11 @@
 #include "bcx.h"
 
-uint8_t M[Msz];   UCELL Ip =0; uint8_t op =0;
-			      UCELL Cp =0;
+/* для IAR используйте утилиту bc2c и задайте define в настройках проекта */
+#ifndef BCXIAR
+BYTE M[Msz]; UCELL Cp =0;
+#endif
+
+   UCELL Ip =0; uint8_t op =0;
   UCELL R[Rsz]; uint8_t Rp =0;
    CELL D[Dsz]; uint8_t Dp =0;
 
