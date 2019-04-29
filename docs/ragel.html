@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bcx: Ragel: генератор парсеров</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bcx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Ragel: генератор парсеров </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="http://www.colm.net/open-source/ragel">утилита <code>ragel</code></a> гененирует <em>процедурный</em> код конечного автомата на Си</p>
+<p>на основе файла описания содержащего</p><ul>
+<li>регулярные выражения для формата команд, смешанные с</li>
+<li>кодом на Си, который запускается при входе/выходе в состояние, соответствуещее конкретной части regexp.</li>
+</ul>
+<h3>анализ и отладка сгенерированного кода</h3>
+<p>Для отладки <code>ragel</code> не только</p><ul>
+<li>генерирует код, хорошо анализируемый в интерактивном отладчике, но и</li>
+<li>имеет вывод полученного конечного автомата в графическом виде в формате <a href="http://www.graphviz.org">Graphviz</a> <code>.dot -&gt; .pdf</code> <div class="image">
+<img src="http://www.colm.net/images/number_lg.png"/>
+</div>
+</li>
+</ul>
+<h3>применимость для микроконтроллеров</h3>
+<ul>
+<li>cгенерированный код не использует схемы буферизации и ввод/вывод завязанный на <code>libc</code> (как это делают стандартные утилиты <code>lex/yacc/bison</code>).</li>
+<li><b>парсер не требует для работы никаких таблиц, не использует динамическую память</b>,<ul>
+<li>ему нужно всего несколько переменных, которые вы можете сделать локальными или глобальными по вашему выбору</li>
+</ul>
+</li>
+<li>для связи парсера с остальным кодом <em>используются всего два указателя</em>:<ul>
+<li>cmdio_p начало буфера в памяти, и</li>
+<li>cmdio_pe указатель конца команды (<code>[E]of</code>)</li>
+</ul>
+</li>
+<li>полученный код чисто процедурный, построен на <code>switch</code>-цикле, и прямых переходах; каждое состояние и переход помечены в коде метками соответственно <code>stN</code> и <code>trN</code></li>
+<li>графическое представление конечного автомата и размещенный код обеспечивают простую отладку в любом отладчике для встраиваемых систем,<ul>
+<li>по меткам легко определяется текущая позиция на графе переходов</li>
+<li>на графе переходы помещены значениями символов (в текущей позиции разбора) </li>
+</ul>
+</li>
+</ul>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

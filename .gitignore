@@ -14,8 +14,6 @@ bcx
 compiler
 *.bc
 
-docs/
-
 b2c
 FORTH.c
 

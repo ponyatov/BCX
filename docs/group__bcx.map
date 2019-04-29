@@ -1,0 +1,6 @@
+<map id="bcx:FORTH" name="bcx:FORTH">
+<area shape="rect" id="node1" href="$group__bcxwin32.html" title="Windows. " alt="" coords="154,5,210,32"/>
+<area shape="rect" id="node2" href="$group__bcxvm.html" title="виртуальная машина " alt="" coords="162,56,202,83"/>
+<area shape="rect" id="node4" href="$group__excompiler.html" title="внешний компилятор байткода " alt="" coords="147,107,217,133"/>
+<area shape="rect" id="node5" href="$group__bcxlinux.html" title="Linux. " alt="" coords="157,157,207,184"/>
+</map>

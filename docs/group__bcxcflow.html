@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bcx: управление потоком выполнения</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bcx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">управление потоком выполнения<div class="ingroups"><a class="el" href="group__bcx.html">bcx:FORTH</a> &raquo; <a class="el" href="group__bcxvm.html">vm</a> &raquo; <a class="el" href="group__bcxcmd.html">команды</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф связей класса управление потоком выполнения:</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="group__bcxcflow.png" border="0" alt="" usemap="#group____bcxcflow"/>
+<map name="group____bcxcflow" id="group____bcxcflow">
+<area shape="rect" id="node1" href="group__bcxcmd.html" title="команды" alt="" coords="5,13,44,40"/>
+</map>
+</td></tr></table></center>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:gabe8cfc9442ee22b03cbd910fe8d57b7f"><td class="memItemLeft" align="right" valign="top"><a id="gabe8cfc9442ee22b03cbd910fe8d57b7f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#gabe8cfc9442ee22b03cbd910fe8d57b7f">op_NOP</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="memdesc:gabe8cfc9442ee22b03cbd910fe8d57b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>NOP ( -- )</code> пустая команда <br /></td></tr>
+<tr class="separator:gabe8cfc9442ee22b03cbd910fe8d57b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b19f732fa785774c8c7d3e7beda0284"><td class="memItemLeft" align="right" valign="top"><a id="ga8b19f732fa785774c8c7d3e7beda0284"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#ga8b19f732fa785774c8c7d3e7beda0284">op_BYE</a>&#160;&#160;&#160;0xFF</td></tr>
+<tr class="memdesc:ga8b19f732fa785774c8c7d3e7beda0284"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>BYE ( retcode -- )</code> завершение работы <br /></td></tr>
+<tr class="separator:ga8b19f732fa785774c8c7d3e7beda0284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11f6dba9f3fb5162929fd2b561701c82"><td class="memItemLeft" align="right" valign="top"><a id="ga11f6dba9f3fb5162929fd2b561701c82"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#ga11f6dba9f3fb5162929fd2b561701c82">op_JMP</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:ga11f6dba9f3fb5162929fd2b561701c82"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>JMP ( -- )</code> безусловный переход <br /></td></tr>
+<tr class="separator:ga11f6dba9f3fb5162929fd2b561701c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga545414e056fc73471e92b113d321e493"><td class="memItemLeft" align="right" valign="top"><a id="ga545414e056fc73471e92b113d321e493"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#ga545414e056fc73471e92b113d321e493">op_qJMP</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="memdesc:ga545414e056fc73471e92b113d321e493"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>?JMP ( false -- )</code> условный переход по false <br /></td></tr>
+<tr class="separator:ga545414e056fc73471e92b113d321e493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06aa6c14a3518a8642be9d457257a031"><td class="memItemLeft" align="right" valign="top"><a id="ga06aa6c14a3518a8642be9d457257a031"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#ga06aa6c14a3518a8642be9d457257a031">op_CALL</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="memdesc:ga06aa6c14a3518a8642be9d457257a031"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>CALL (R: -- addr )</code> вложенный вызов <br /></td></tr>
+<tr class="separator:ga06aa6c14a3518a8642be9d457257a031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf58828713825755b6d8b71b384a23166"><td class="memItemLeft" align="right" valign="top"><a id="gaf58828713825755b6d8b71b384a23166"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#gaf58828713825755b6d8b71b384a23166">op_RET</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="memdesc:gaf58828713825755b6d8b71b384a23166"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>RET (R: addr -- )</code> возврат <br /></td></tr>
+<tr class="separator:gaf58828713825755b6d8b71b384a23166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac17b56b3f16e386162ca89b361d18b14"><td class="memItemLeft" align="right" valign="top"><a id="gac17b56b3f16e386162ca89b361d18b14"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bcxcflow.html#gac17b56b3f16e386162ca89b361d18b14">op_LIT</a>&#160;&#160;&#160;0x05</td></tr>
+<tr class="memdesc:gac17b56b3f16e386162ca89b361d18b14"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LIT ( -- int )</code> числовой литерал (поместить константу в стек) <br /></td></tr>
+<tr class="separator:gac17b56b3f16e386162ca89b361d18b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga9d9f3446653e398af0583979cee23c70"><td class="memItemLeft" align="right" valign="top"><a id="ga9d9f3446653e398af0583979cee23c70"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>NOP</b> (void)</td></tr>
+<tr class="separator:ga9d9f3446653e398af0583979cee23c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e9d7bd118297b9ec7cbbe003d3a7f80"><td class="memItemLeft" align="right" valign="top"><a id="ga7e9d7bd118297b9ec7cbbe003d3a7f80"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>BYE</b> (void)</td></tr>
+<tr class="separator:ga7e9d7bd118297b9ec7cbbe003d3a7f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga833477f5c3bc4f230b83e481c58a0684"><td class="memItemLeft" align="right" valign="top"><a id="ga833477f5c3bc4f230b83e481c58a0684"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>JMP</b> (void)</td></tr>
+<tr class="separator:ga833477f5c3bc4f230b83e481c58a0684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cc2613d807e7e42a861cb4430113f57"><td class="memItemLeft" align="right" valign="top"><a id="ga1cc2613d807e7e42a861cb4430113f57"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>qJMP</b> (void)</td></tr>
+<tr class="separator:ga1cc2613d807e7e42a861cb4430113f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d6192ebc013c963903c8b6cd4f838a6"><td class="memItemLeft" align="right" valign="top"><a id="ga8d6192ebc013c963903c8b6cd4f838a6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CALL</b> (void)</td></tr>
+<tr class="separator:ga8d6192ebc013c963903c8b6cd4f838a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b09d861a2be6db2007fc1a2dd939070"><td class="memItemLeft" align="right" valign="top"><a id="ga5b09d861a2be6db2007fc1a2dd939070"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RET</b> (void)</td></tr>
+<tr class="separator:ga5b09d861a2be6db2007fc1a2dd939070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga902920a11b6afff26f1b2db5a9ea9865"><td class="memItemLeft" align="right" valign="top"><a id="ga902920a11b6afff26f1b2db5a9ea9865"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LIT</b> (void)</td></tr>
+<tr class="separator:ga902920a11b6afff26f1b2db5a9ea9865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
